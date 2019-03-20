@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/neat-page",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
