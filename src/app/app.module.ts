@@ -7,12 +7,13 @@ import { LandingModule } from './modules/landing/landing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LandingModule
+    LandingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

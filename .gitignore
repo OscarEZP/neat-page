@@ -42,3 +42,31 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/Default
+/Safe Browsing
+/ShaderCache
+/BrowserMetrics-spare.pma
+/Content To Send Stats
+/First Run
+/Local State
+/Dictionaries
+/.vscode
+/chrome_shutdown_ms.txt
+/BrowserMetrics
+/Consent To Send Stats
+/Safe Browsing Channel IDs
+/Safe Browsing Channel IDs-journal
+/Safe Browsing Cookies
+/Safe Browsing Cookies-journal
+/SingletonCookie
+/SingletonLock
+/SingletonSocket
+/CertificateRevocation
+/CertificateTransparency
+/FileTypePolicies
+/PepperFlash
+/SSLErrorAssistant
+/Subresource Filter
+/pnacl
+/MEIPreload

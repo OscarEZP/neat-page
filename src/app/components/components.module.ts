@@ -5,6 +5,9 @@ import { HomeComponent } from './landing/home/home.component';
 import { FeaturesComponent } from './landing/features/features.component';
 import { FooterComponent } from './landing/footer/footer.component';
 import { WeDoComponent } from './landing/we-do/we-do.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CardActionsComponent } from './landing/card-actions/card-actions.component';
 
 @NgModule({
   declarations: [
@@ -12,17 +15,23 @@ import { WeDoComponent } from './landing/we-do/we-do.component';
     HomeComponent,
     FeaturesComponent,
     FooterComponent,
-    WeDoComponent
+    WeDoComponent,
+    CardActionsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule
   ],
   exports: [
     NavbarComponent,
     HomeComponent,
     FeaturesComponent,
     FooterComponent,
-    WeDoComponent
+    WeDoComponent,
+    CardActionsComponent
+
   ]
 })
 export class ComponentsModule { }
