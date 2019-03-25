@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "https://neatwebplatform.appspot.com",
+      "secure": false,
+      "changeOrigin": "true",
+      "pathRewrite": {"^/api" : "https://neatwebplatform.appspot.com/api"}
+    }
+  }

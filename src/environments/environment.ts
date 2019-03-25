@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  neat_be: 'https://neatwebplatform.appspot.com'
+  neat_be: 'https://neatwebplatform.appspot.com',
+  neat_be_local: 'http://localhost:8080/api'
 };
 
 /*

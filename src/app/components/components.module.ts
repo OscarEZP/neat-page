@@ -6,8 +6,13 @@ import { FeaturesComponent } from './landing/features/features.component';
 import { FooterComponent } from './landing/footer/footer.component';
 import { WeDoComponent } from './landing/we-do/we-do.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardActionsComponent } from './landing/card-actions/card-actions.component';
+import { UserProcessComponent } from './landing/user-process/user-process.component';
+import { HowWorkComponent } from './landing/how-work/how-work.component';
+import { ToastrModule } from 'ngx-toastr';
+import { PlansComponent } from './landing/plans/plans.component';
+import { LoginComponent } from './landing/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,19 @@ import { CardActionsComponent } from './landing/card-actions/card-actions.compon
     FeaturesComponent,
     FooterComponent,
     WeDoComponent,
-    CardActionsComponent
+    CardActionsComponent,
+    UserProcessComponent,
+    HowWorkComponent,
+    PlansComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   exports: [
     NavbarComponent,
@@ -30,7 +41,11 @@ import { CardActionsComponent } from './landing/card-actions/card-actions.compon
     FeaturesComponent,
     FooterComponent,
     WeDoComponent,
-    CardActionsComponent
+    CardActionsComponent,
+    UserProcessComponent,
+    HowWorkComponent,
+    PlansComponent,
+    LoginComponent
 
   ]
 })

@@ -17,10 +17,38 @@
   <link rel="stylesheet" href="./assets/vendor/fancybox/jquery.fancybox.css">
   <link rel="stylesheet" href="./assets/vendor/dzsparallaxer/dzsparallaxer.css">
 
+  <link rel="stylesheet" href="./assets/vendor/custombox/dist/custombox.min.css">
+
+  
+
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="./assets/css/theme.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136589413-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136589413-1');
+  </script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N5J3L3V');</script>
+  <!-- End Google Tag Manager -->
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5J3L3V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <app-root></app-root>
 
 
@@ -46,6 +74,10 @@
   <script src="./assets/js/components/hs.fancybox.js"></script>
   <script src="./assets/js/components/hs.validation.js"></script>
   <script src="./assets/js/components/hs.go-to.js"></script>
+
+  <script src="./assets/vendor/custombox/dist/custombox.min.js"></script>
+  <script src="./assets/vendor/custombox/dist/custombox.legacy.min.js"></script>
+  <script src="./assets/js/components/hs.modal-window.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
@@ -79,6 +111,10 @@
 
       // initialization of go to
       $.HSCore.components.HSGoTo.init('.js-go-to');
+
+      $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-modal-window', {
+        autonomous: true
+      });
     });
   </script>
 </body>

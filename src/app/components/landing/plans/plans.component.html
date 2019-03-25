@@ -1,0 +1,59 @@
+<div class="container" style="padding-top: 11rem !important; padding-bottom: 11rem !important;">
+  <div class="row justify-content-between align-items-center mb-3">
+    <div class="col-12 text-center mb-3 mb-sm-0">
+      <h2 class="h5 mb-0">Planes de subscripción</h2>
+    </div>
+  
+    <div class="col-12 text-center">
+      <div class="btn-group btn-group-toggle">
+        <a class="js-animation-link btn btn-sm btn-outline-primary btn-sm-wide" (click)="plan('monthly')" [ngClass]="{'active': planType === 'monthly'}">
+          Mensual
+        </a>
+        <a class="js-animation-link btn btn-sm btn-outline-primary btn-sm-wide" (click)="plan('anual')" [ngClass]="{'active': planType === 'anual'}">
+          Anual
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center float-center text-center">
+    <div class="js-slide col-lg-5 col-sm">
+      <div class="card">
+        <!-- Header -->
+        <header class="card-header bg-primary text-white text-center">
+          <span class="btn btn-xs btn-soft-white mb-3">Plan Vida + Simple</span>
+          <span class="d-block">
+            <span class="display-4 font-weight-normal">
+              <span class="align-top font-size-2">$</span><span *ngIf="planType === 'monthly'"> 1.990</span> <span *ngIf="planType === 'anual'"> 23.900</span> 
+            </span>
+            <span class="d-block text-white-50 font-size-1">Un café menos al mes, simplifica tus pagos.</span>
+          </span>
+        </header>
+        <!-- End Header -->
+  
+        <!-- Content -->
+        <div class="card-body p-5">
+          <ul class="list-unstyled font-size-1 mb-4">
+            <li class="media py-2">
+              <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span>
+              <div class="media-body">
+                Soporte extendido
+              </div>
+            </li>
+            <li class="media py-2">
+              <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span>
+              <div class="media-body">
+                Administración de propiedades
+              </div>
+            </li>
+          </ul>
+  
+          <button type="button" class="btn btn-sm btn-block btn-primary transition-3d-hover">Contratar ahora</button>
+        </div>
+      </div>
+      <!-- End Content -->
+    </div>
+  </div>
+  
+</div>
+<!-- Title -->
+ 
