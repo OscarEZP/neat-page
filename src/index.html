@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>NeatPage</title>
+  <title>Neat, simplificamos tus pagos</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -19,7 +19,9 @@
 
   <link rel="stylesheet" href="./assets/vendor/custombox/dist/custombox.min.css">
 
-  
+  <link rel="stylesheet" href="./assets/vendor/slick-carousel/slick/slick.css">
+
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="./assets/css/theme.css">
@@ -78,7 +80,12 @@
   <script src="./assets/vendor/custombox/dist/custombox.min.js"></script>
   <script src="./assets/vendor/custombox/dist/custombox.legacy.min.js"></script>
   <script src="./assets/js/components/hs.modal-window.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
 
+  <script src="./assets/vendor/slick-carousel/slick/slick.js"></script>
+
+  <script src="./assets/js/components/hs.slick-carousel.js"></script>
+	
   <!-- JS Plugins Init. -->
   <script>
     $(window).on('load', function () {
@@ -115,6 +122,9 @@
       $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-modal-window', {
         autonomous: true
       });
+
+      $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+
     });
   </script>
 </body>

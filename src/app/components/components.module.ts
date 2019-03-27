@@ -10,9 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardActionsComponent } from './landing/card-actions/card-actions.component';
 import { UserProcessComponent } from './landing/user-process/user-process.component';
 import { HowWorkComponent } from './landing/how-work/how-work.component';
-import { ToastrModule } from 'ngx-toastr';
 import { PlansComponent } from './landing/plans/plans.component';
 import { LoginComponent } from './landing/login/login.component';
+import { ToastNotificationsModule } from 'ngx-toast-notifications';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { LoginComponent } from './landing/login/login.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastNotificationsModule.forRoot()
   ],
   exports: [
     NavbarComponent,

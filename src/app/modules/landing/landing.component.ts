@@ -7,6 +7,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
   scrollingX = 0;
+  showUserType: any;
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     this.scrollingX = window.pageYOffset;
   }
@@ -14,6 +15,10 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  userType($event) {
+    this.showUserType = $event;
   }
 
 }

@@ -1,24 +1,11 @@
 <!-- ========== HEADER ========== -->
-<header id="header" class="u-header u-header--white-bg-on-scroll u-header--sticky-top-md u-header--bg-transparent"
-data-header-fix-moment="500"
-data-header-fix-effect="slide">
+<header id="header" class="u-header u-header--white-bg-on-scroll u-header--sticky-top-md u-header--bg-transparent" data-header-fix-moment="500" data-header-fix-effect="slide">
 <div class="u-header__section">
 <div id="logoAndNav" class="container">
-<!-- Nav -->
 <nav class="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
-<!-- Logo -->
-<a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="index.html" aria-label="Front">
-  <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46px" height="46px" viewBox="0 0 46 46" xml:space="preserve" style="margin-bottom: 0;">
-    <path fill="#3F7DE0" opacity=".65" d="M23,41L23,41c-9.9,0-18-8-18-18v0c0-9.9,8-18,18-18h11.3C38,5,41,8,41,11.7V23C41,32.9,32.9,41,23,41z"/>
-    <path class="fill-info" opacity=".5" d="M28,35.9L28,35.9c-9.9,0-18-8-18-18v0c0-9.9,8-18,18-18l11.3,0C43,0,46,3,46,6.6V18C46,27.9,38,35.9,28,35.9z"/>
-    <path class="fill-primary" opacity=".7" d="M18,46L18,46C8,46,0,38,0,28v0c0-9.9,8-18,18-18h11.3c3.7,0,6.6,3,6.6,6.6V28C35.9,38,27.9,46,18,46z"/>
-    <path class="fill-white" d="M17.4,34V18.3h10.2v2.9h-6.4v3.4h4.8v2.9h-4.8V34H17.4z"/>
-  </svg> -->
-  <span class="u-header__navbar-brand-text">NEAT</span>
+<a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center" aria-label="Front">
+  <span class="u-header__navbar-brand-text" style="font-size: 3rem;">NEAT</span>
 </a>
-<!-- End Logo -->
-
-<!-- Responsive Toggle Button -->
 <button type="button" class="navbar-toggler btn u-hamburger"
         aria-label="Toggle navigation"
         aria-expanded="false"
@@ -29,129 +16,32 @@ data-header-fix-effect="slide">
     <span class="u-hamburger__inner"></span>
   </span>
 </button>
-<!-- End Responsive Toggle Button -->
-
-<!-- Navigation -->
 <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
   <ul class="js-scroll-nav js-mega-menu navbar-nav align-items-md-center u-header__navbar-nav">
-    <li class="nav-item u-header__nav-item">
-      <!-- <a class="nav-link u-header__nav-link" href="#homeSection">Yo soy: Arrendatario / Propieario</a> -->
+    <span>Yo soy:</span>
+    <li id="button-nav-owner" class="nav-item u-header__nav-item" [ngClass]="{'active': showOwner === true}" (click)="fnShowOwner()">
+       <a class="nav-link u-header__nav-link" id="pills-one-tab" data-toggle="pill" href="" role="tab" aria-controls="pills-one" aria-selected="true">Propietario</a>
     </li>
-
-    <!-- About -->
-    <!-- <li class="nav-item hs-has-sub-menu u-header__nav-item"
-        data-event="hover"
-        data-animation-in="slideInUp"
-        data-animation-out="fadeOut"
-        data-position="left">
-      <a id="aboutMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="aboutSubMenu">About</a>
-
-      <ul id="aboutSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="aboutMegaMenu" style="min-width: 230px;">
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="#ourStorySection">Nuestra vision</a></li>
-        <li><a class="nav-link u-header__sub-menu-nav-link" href="#whatWeDoSection">¿Que hacemos?</a></li>
-      </ul>
-    </li> -->
-    <!-- End About -->
-
-    <!-- <li class="nav-item u-header__nav-item">
-      <a class="nav-link u-header__nav-link" href="">Quiero arrendar</a>
-    </li> -->
-
-    <!-- Demos -->
-    <!-- <li class="nav-item hs-has-mega-menu u-header__nav-item"
-        data-event="hover"
-        data-animation-in="slideInUp"
-        data-animation-out="fadeOut"
-        data-max-width="600px"
-        data-position="right">
-      <a id="demosMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Demos</a> -->
-
-      <!-- Demos - Mega Menu -->
-      <!-- <div class="hs-mega-menu w-100 u-header__sub-menu" aria-labelledby="demosMegaMenu">
-        <div class="row no-gutters">
-          <div class="col-md-6"> -->
-            <!-- Promo Item -->
-            <!-- <div class="u-header__promo-item">
-              <a class="u-header__promo-link" href="../house/index.html">
-                <div class="media align-items-center">
-                  <img class="js-svg-injector u-header__promo-icon" src="../../assets/svg/icons/icon-13.svg" alt="SVG">
-                  <div class="media-body">
-                    <span class="u-header__promo-title">House</span>
-                    <small class="u-header__promo-text">Real estate demo.</small>
-                  </div>
-                </div>
-              </a>
-            </div> -->
-            <!-- End Promo Item -->
-
-            <!-- Promo Item -->
-            <!-- <div class="u-header__promo-item">
-              <a class="u-header__promo-link" href="../job/index.html">
-                <div class="media align-items-center">
-                  <img class="js-svg-injector u-header__promo-icon" src="../../assets/svg/icons/icon-19.svg" alt="SVG">
-                  <div class="media-body">
-                    <span class="u-header__promo-title">Job</span>
-                    <small class="u-header__promo-text">Job vacancy demo.</small>
-                  </div>
-                </div>
-              </a>
-            </div> -->
-            <!-- End Promo Item -->
-
-            <!-- Promo Item -->
-            <!-- <div class="u-header__promo-item">
-              <a class="u-header__promo-link" href="../crypto/index.html">
-                <div class="media align-items-center">
-                  <img class="js-svg-injector u-header__promo-icon" src="../../assets/svg/icons/icon-5.svg" alt="SVG">
-                  <div class="media-body">
-                    <span class="u-header__promo-title">Crypto landing</span>
-                    <small class="u-header__promo-text">Cryptocurrency demo.</small>
-                  </div>
-                </div>
-              </a>
-            </div> -->
-            <!-- End Promo Item -->
-          <!-- </div> -->
-
-          <!-- Promo -->
-          <!-- <div class="col-md-6 u-header__promo">
-            <a class="d-block u-header__promo-inner" href="javascript:;">
-              <div class="position-relative">
-                <img class="img-fluid rounded mb-3" src="../../assets/img/380x227/img6.jpg" alt="Image Description">
-                <span class="badge badge-success badge-pill badge-pos shadow-sm mt-3">New</span>
-              </div>
-              <span class="text-secondary font-size-1">Front makes you look at things from a different perspectives.</span>
-            </a>
-          </div> -->
-          <!-- End Promo -->
-        <!-- </div>
-      </div> -->
-      <!-- End Demos - Mega Menu -->
-    <!-- </li> -->
-    <!-- End Demos -->
-
-
+    <li id="button-nav-lessee" class="nav-item u-header__nav-item" (click)="fnShowLessee()" [ngClass]="{'active': showOwner !== true}">
+      <a class="nav-link u-header__nav-link" id="pills-two-tab" data-toggle="pill" href="" role="tab" aria-controls="pills-two" aria-selected="false">Arrendatario</a>
+    </li>
+     
     <li class="nav-item u-header__nav-last-item"
         href="#aftersometimeModal"
         data-modal-target="#aftersometimeModal"
         data-modal-effect="fadein">
-      <button class="btn btn-primary btn-sm btn-wide transition-3d-hover"
-        (click)="showAlertSuccess = false;" *ngIf="scrollX > 200"
+      <button id="button-suscribe-navbar" class="btn btn-primary btn-sm btn-wide transition-3d-hover"
+        (click)="showAlertSuccess = false;" *ngIf="scrollX > 400"
       >Subscribirse</button>
     </li>
   </ul>
 </div>
-<!-- End Navigation -->
 </nav>
-<!-- End Nav -->
 </div>
 </div>
 </header>
-<!-- ========== END HEADER ========== -->
 
 
-
-<!-- Modal -->
 <div id="aftersometimeModal" class="js-modal-window u-modal-window" data-modal-type="aftersometime"
   data-open-effect="zoomIn"
   data-close-effect="zoomOut"
@@ -161,7 +51,7 @@ data-header-fix-effect="slide">
     <!-- Header -->
     <header class="card-header bg-light py-3 px-5">
       <div class="d-flex justify-content-between align-items-center">
-        <h3 class="h6 mb-0">Suscribete ingresando tu email y recibe nuestras novedades</h3>
+        <h3 class="h6 mb-0">Estás a un click de ser parte de Neat</h3>
 
         <button type="button" class="close" aria-label="Close" onclick="Custombox.modal.close();">
           <span aria-hidden="true">×</span>
@@ -172,19 +62,21 @@ data-header-fix-effect="slide">
 
     <!-- Body -->
     <div class="card-body p-5">
-      <div class="alert alert-success" role="alert" *ngIf="showAlertSuccess">
-        <h4 class="alert-heading">Enhorabuena te has suscrito!</h4>
-        <p class="alert-text">Muy bien <strong>{{userSubscribed.email}}!</strong> pronto te estaremos informando sobre nuevas noticias NEAT.</p>
-      </div>
-      <form [formGroup]="ngForm">
-        <div class="form-group">
+      <form [formGroup]="ngForm" class="js-validate">
+        <div class="form-group js-form-message">
           <label for="exampleFormControlInput1">Email</label>
-          <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input aria-label="Ingresa tu email" required
+          data-msg="Por favor ingresa un email válido."
+          data-error-class="u-has-error"
+          data-success-class="u-has-success" formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <!-- <span *ngIf="ngForm['controls'].email.errors.email">Correo no válido</span> -->
+        
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Tipo de usuario</label>
           <select formControlName="type" class="form-control" id="exampleFormControlSelect1">
-            <option *ngFor="let type of userTypes" value="{{type.slug}}">{{type.name}}</option>
+            <option value="LESSEE">Arrendatario</option>
+            <option value="OWNER">Propietario</option>
           </select>
         </div>
       </form>
@@ -193,7 +85,7 @@ data-header-fix-effect="slide">
 
     <!-- Footer -->
     <div class="card-footer d-flex justify-content-end">
-      <button type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" (click)="userSubscription(); Custombox.modal.close();">Suscribirse</button>
+      <button type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" onClick="Custombox.modal.close();" (click)="userSubscription();">Suscribirse</button>
       <button type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Close</button>
     </div>
     <!-- End Footer -->

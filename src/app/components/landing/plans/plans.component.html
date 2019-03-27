@@ -1,7 +1,7 @@
 <div class="container" style="padding-top: 11rem !important; padding-bottom: 11rem !important;">
   <div class="row justify-content-between align-items-center mb-3">
     <div class="col-12 text-center mb-3 mb-sm-0">
-      <h2 class="h5 mb-0">Planes de subscripción</h2>
+      <h2 class="h5 mb-0">Plan de subscripción</h2>
     </div>
   
     <div class="col-12 text-center">
@@ -15,12 +15,13 @@
       </div>
     </div>
   </div>
-  <div class="row justify-content-center float-center text-center">
+  <div class="row justify-content-center float-center">
     <div class="js-slide col-lg-5 col-sm">
       <div class="card">
         <!-- Header -->
         <header class="card-header bg-primary text-white text-center">
-          <span class="btn btn-xs btn-soft-white mb-3">Plan Vida + Simple</span>
+          <span class="btn btn-xs btn-soft-white mb-3 mr-2">Plan Vida + Simple</span>
+          <strong class="btn btn-xs btn-soft-white mb-3" *ngIf="planType === 'anual'">20% dcto</strong>
           <span class="d-block">
             <span class="display-4 font-weight-normal">
               <span class="align-top font-size-2">$</span><span *ngIf="planType === 'monthly'"> 1.990</span> <span *ngIf="planType === 'anual'"> 23.900</span> 
@@ -34,20 +35,22 @@
         <div class="card-body p-5">
           <ul class="list-unstyled font-size-1 mb-4">
             <li class="media py-2">
-              <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span>
+              <!-- <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span> -->
               <div class="media-body">
-                Soporte extendido
+                Paga la parte interesada, ya sea arrendatario u propietario
               </div>
             </li>
             <li class="media py-2">
-              <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span>
+              <!-- <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span> -->
               <div class="media-body">
-                Administración de propiedades
+                Por propiedad/arriendo
               </div>
             </li>
           </ul>
   
-          <button type="button" class="btn btn-sm btn-block btn-primary transition-3d-hover">Contratar ahora</button>
+          <button id="button-suscribe-plan" type="button" class="btn btn-sm btn-block btn-primary transition-3d-hover" href="#aftersometimeModal"
+          data-modal-target="#aftersometimeModal"
+          data-modal-effect="fadein" >Contratar ahora</button>
         </div>
       </div>
       <!-- End Content -->
@@ -56,4 +59,57 @@
   
 </div>
 <!-- Title -->
- 
+
+
+
+<!-- Modal -->
+<div id="aftersometimeModal" class="js-modal-window u-modal-window" data-modal-type="aftersometime"
+  data-open-effect="zoomIn"
+  data-close-effect="zoomOut"
+  data-breakpoint="1000"
+  data-speed="500">
+  <div class="card">
+    <!-- Header -->
+    <header class="card-header bg-light py-3 px-5">
+      <div class="d-flex justify-content-between align-items-center">
+        <h3 class="h6 mb-0">Estás a un click de ser parte de Neat</h3>
+
+        <button type="button" class="close" aria-label="Close" onclick="Custombox.modal.close();">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Body -->
+    <div class="card-body p-5">
+      <form [formGroup]="ngForm" class="js-validate">
+        <div class="form-group js-form-message">
+          <label for="exampleFormControlInput1">Email</label>
+          <input aria-label="Ingresa tu email" required
+          data-msg="Por favor ingresa un email válido."
+          data-error-class="u-has-error"
+          data-success-class="u-has-success" formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <!-- <span *ngIf="ngForm['controls'].email.errors.email">Correo no válido</span> -->
+        
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Tipo de usuario</label>
+          <select formControlName="type" class="form-control" id="exampleFormControlSelect1">
+            <option value="LESSEE">Arrendatario</option>
+            <option value="OWNER">Propietario</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <!-- End Body -->
+
+    <!-- Footer -->
+    <div class="card-footer d-flex justify-content-end">
+      <button type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" onClick="Custombox.modal.close();" (click)="userSubscription();">Suscribirse</button>
+      <button type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Close</button>
+    </div>
+    <!-- End Footer -->
+  </div>
+</div>
+<!-- End Modal -->
