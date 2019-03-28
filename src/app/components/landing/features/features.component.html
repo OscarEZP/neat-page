@@ -1,12 +1,12 @@
   <!-- Features Section -->
   <div id="featuresSection" class="container space-2 space-md-3">
     <div class="w-md-120 w-lg-70 text-center mx-md-auto mb-9">
-      <h2 class="h3 font-weight-semi-bold">Todo lo hacemos buscando transparencia y eficiencia. Para lograr esto, desarrollamos una plataforma que te entiende. Teniendo como resultado una experiencia única</h2>
+      <h2 class="h3 font-weight-semi-bold">Bienvenidos a un mundo donde la transparencia y eficiencia son el motor.</h2>
     </div>
       
     <div id="SVGmockupBg" >
       <div *ngIf="!userType.owner" class="row justify-content-lg-between align-items-lg-center">
-        <div class="col-6 col-lg-3  mb-9 mb-lg-0">
+        <div class="col-6 mb-lg-0">
           <div class="text-center px-lg-5 mb-4">
             <figure id="icon12" class="mx-auto mb-3">
               <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/030-online-shop-1.svg" alt="SVG"
@@ -15,7 +15,7 @@
             <h4 class="h6">Ofrecemos distintos medios de pago</h4>
           </div>
         </div>
-        <div class="col-6 col-lg-3  mb-9 mb-lg-0">
+        <div class="col-6 mb-lg-0">
           <div class="text-center px-lg-5 mb-4">
             <figure id="icon10" class="ie-height-72 max-width-10 mx-auto mb-3">
               <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/031-alarm.svg" alt="SVG"
@@ -24,7 +24,7 @@
             <h3 class="h6">Enviamos notificaciones para recordar fechas de pago y avisar eventos importantes</h3>
           </div>
         </div>
-        <div class="col-6 col-lg-3  mb-9 mb-lg-0">
+        <div class="col-6 mb-lg-0">
           <div class="text-center px-lg-5 mb-4">
             <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
               <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/013-profile.svg" alt="SVG"
@@ -33,7 +33,7 @@
             <h3 class="h6">Perfil de usuario universal para usarlo en cualquier arriendo</h3>
           </div>
         </div>
-        <div class="col-6 col-lg-3  mb-9 mb-lg-0">
+        <div class="col-6 mb-lg-0">
           <div class="text-center px-lg-5 mb-4">
             <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
               <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/052-platform.svg" alt="SVG"
@@ -43,53 +43,56 @@
           </div>
         </div>
       </div>
-      <div *ngIf="userType.owner" class="row justify-content-lg-between align-items-lg-center" >
-        <div class="col-6 col-lg  mb-9 mb-lg-0">
-          <div class="text-center px-lg-5 mb-4">
-            <figure id="icon12" class="mx-auto mb-3">
-              <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/030-online-shop-1.svg" alt="SVG"
-                    data-parent="#icon12">
-            </figure>
-            <h4 class="h6">Ofrecemos distintos medios de pago</h4>
+      <div *ngIf="userType.owner" class="row center-content-lg-between align-items-lg-center" >
+        <div class="row">
+          <div class="col-6 col-lg-4  mb-lg-0">
+            <div class="text-center px-lg-5 mb-4">
+              <figure id="icon12" class="mx-auto mb-3">
+                <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/030-online-shop-1.svg" alt="SVG"
+                      data-parent="#icon12">
+              </figure>
+              <h4 class="h6">Ofrecemos distintos medios de pago</h4>
+            </div>
+          </div>
+          
+          <div class="col-6 col-lg-4 mb-lg-0">
+            <div class="text-center px-lg-5 mb-4">
+              <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
+                <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/018-officer.svg" alt="SVG"
+                      data-parent="#icon11">
+              </figure>
+              <h3 class="h6">Inscribimos automáticamente a los morosos en DICOM</h3>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4 mb-lg-0">
+            <div class="text-center px-lg-5 mb-4">
+              <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
+                <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/038-scales.svg" alt="SVG"
+                      data-parent="#icon11">
+              </figure>
+              <h3 class="h6">Reajustamos el monto del arriendo automaticamente según contrato</h3>
+            </div>
+          </div>
+          <div class="col-6 offset-lg-2 col-lg-4 mb-lg-0">
+            <div class="text-center px-lg-5 mb-4">
+              <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
+                <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/037-task-list.svg" alt="SVG"
+                      data-parent="#icon11">
+              </figure>
+              <h3 class="h6">Entregamos información detallada de tu inversión</h3>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 mb-lg-0">
+            <div class="text-center mb-4">
+              <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
+                <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/051-business.svg" alt="SVG"
+                      data-parent="#icon11">
+              </figure>
+              <h3 class="h6">Centralizamos toda tu información en un panel administrativo</h3>
+            </div>
           </div>
         </div>
         
-        <div class="col-6 col-lg  mb-9 mb-lg-0">
-          <div class="text-center px-lg-5 mb-4">
-            <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
-              <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/018-officer.svg" alt="SVG"
-                    data-parent="#icon11">
-            </figure>
-            <h3 class="h6">Inscribimos automáticamente a los morosos en DICOM</h3>
-          </div>
-        </div>
-        <div class="col-6 col-lg  mb-9 mb-lg-0">
-          <div class="text-center px-lg-5 mb-4">
-            <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
-              <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/038-scales.svg" alt="SVG"
-                    data-parent="#icon11">
-            </figure>
-            <h3 class="h6">Reajustamos el monto del arriendo automaticamente según contrato</h3>
-          </div>
-        </div>
-        <div class="col-6 col-lg mb-9 mb-lg-0">
-          <div class="text-center px-lg-5 mb-4">
-            <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
-              <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/037-task-list.svg" alt="SVG"
-                    data-parent="#icon11">
-            </figure>
-            <h3 class="h6">Entregamos información detallada de tu inversión</h3>
-          </div>
-        </div>
-        <div class="col-12 col-lg mb-9 mb-lg-0">
-          <div class="text-center px-lg-5 mb-4">
-            <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
-              <img style="width: 90px; height: 100px;" class="js-svg-injector" src="../../assets/newRequirements/svg/051-business.svg" alt="SVG"
-                    data-parent="#icon11">
-            </figure>
-            <h3 class="h6">Centralizamos toda tu información en un panel administrativo</h3>
-          </div>
-        </div>
       </div>
       <!-- End Tab Content -->
     </div>

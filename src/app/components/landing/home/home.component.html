@@ -1,15 +1,15 @@
-<div id="featuresSection" class="container space-2">
+<div id="featuresSection" class="container space-2 mt-9">
   <div class="tab-content" id="pills-tabContent">
     <div id="SVGheroSection" class="d-lg-flex position-relative z-index-2 mb-4">
       <div class="container mb-4 d-lg-flex align-items-lg-center flex-lg-wrap height-lg-100vh text-center">
         <div class="w-100 mx-auto mb-9 mb-lg-0">
           <div class="mb-5">
-            <h2 *ngIf="!userType.owner" class="display-4 font-size-md-down-5 font-weight-semi-bold">Descubre una forma simple y segura de pagar tu arriendo</h2>
-            <h2 *ngIf="userType.owner" class="display-4 font-size-md-down-5 font-weight-semi-bold">Descubre una forma simple y segura de administrar los pagos de tu propiedad</h2>
+            <h2 *ngIf="!userType.owner" class="display-4 font-size-md-down-5 font-weight-semi-bold">Pagar tu arriendo nunca ha sido más fácil</h2>
+            <h2 *ngIf="userType.owner" class="display-4 font-size-md-down-5 font-weight-semi-bold">Recibir los pagos de tus arrendatarios nunca ha sido más fácil</h2>
           </div>
           <div class="small mb-4">
-            <span *ngIf="!userType.owner" class="font-weight-medium">Hacemos el pago de tu arriendo ridículamente fácil.</span>
-            <span *ngIf="userType.owner" class="font-weight-medium">Te ayudamos a recibir tus pagos a tiempo y a entender el estado de tu inversión.</span>          
+            <span *ngIf="!userType.owner" class="font-weight-medium">Simplificamos tus preocupaciones.</span>
+            <span *ngIf="userType.owner" class="font-weight-medium">Te ayudamos a recibir los pagos a tiempo y a entender el estado de tu inversión.</span>          
           </div>
           <form class="js-validate w-md-75 w-lg-50 w-xl-40 mx-md-auto mb-4">
             <div class="js-form-message">
@@ -81,8 +81,8 @@
 
     <!-- Footer -->
     <div class="card-footer d-flex justify-content-end">
-      <button type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" (click)="userSubscription();" onClick="Custombox.modal.close();">Suscribirse</button>
-      <button type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Close</button>
+      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" (click)="userSubscription();" onClick="Custombox.modal.close();">Suscribirse</button>
+      <button id="button_close_modal" type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Cerrar</button>
     </div>
     <!-- End Footer -->
   </div>

@@ -106,8 +106,8 @@
 
     <!-- Footer -->
     <div class="card-footer d-flex justify-content-end">
-      <button type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" onClick="Custombox.modal.close();" (click)="userSubscription();">Suscribirse</button>
-      <button type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Close</button>
+      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" onClick="Custombox.modal.close();" (click)="userSubscription();">Suscribirse</button>
+      <button id="button_close_modal" type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Cerrar</button>
     </div>
     <!-- End Footer -->
   </div>
