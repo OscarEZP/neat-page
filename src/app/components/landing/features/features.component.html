@@ -18,13 +18,13 @@
               </div>
             </div>
             <div class="flip-box-back">
-              <h2>Back Side</h2>
+              <h4 class="h6">Utiliza los beneficios de tu tarjeta de crédito o simplemente haz una transferencia.</h4>
             </div>
           </div>
           
         </div>
-        <div class="col-6 mb-lg-0 flip-box">
-          <div class="flip-box-inner">
+        <div class="col-6 mb-lg-0 flip-box" (click)="selectCard(2)">
+          <div class="flip-box-inner" [ngStyle]="{'transform': card === 2 ? 'rotateY(180deg)' : null}">
             <div class="flip-box-front">
               <div class="text-center px-lg-5 mb-4">
                 <figure id="icon10" class="ie-height-72 max-width-10 mx-auto mb-3">
@@ -39,8 +39,8 @@
             </div>
           </div>
         </div>
-        <div class="col-6 mb-lg-0 flip-box">
-          <div class="flip-box-inner">
+        <div class="col-6 mb-lg-0 flip-box" (click)="selectCard(3)">
+          <div class="flip-box-inner" [ngStyle]="{'transform': card === 3 ? 'rotateY(180deg)' : null}">
             <div class="flip-box-front">
               <div class="text-center px-lg-5 mb-4">
                 <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
@@ -51,12 +51,12 @@
               </div>
             </div>
             <div class="flip-box-back">
-              <h2>Back Side</h2>
+              <h3 class="h6">Te ayudamos recordar los reajustes en el arriendo, evitar multas y malos ratos.</h3>
             </div>
           </div>
         </div>
-        <div class="col-6 mb-lg-0 flip-box">
-          <div class="flip-box-inner">
+        <div class="col-6 mb-lg-0 flip-box" (click)="selectCard(4)">
+          <div class="flip-box-inner" [ngStyle]="{'transform': card === 4 ? 'rotateY(180deg)' : null}">
             <div class="flip-box-front">
               <div class="text-center px-lg-5 mb-4">
                 <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
@@ -67,15 +67,15 @@
               </div>
             </div>
             <div class="flip-box-back">
-              <h2>Back Side</h2>
+              <h3 class="h6">Revisa tu cuenta desde tu celular, computador de trabajo o tablet manteniendo la misma experiencia.</h3>
             </div>
           </div>
         </div>
       </div>
       <div *ngIf="userType.owner" class="row center-content-lg-between align-items-lg-center" >
         <div class="row">
-          <div class="col-6 col-lg-4 flip-box mb-lg-0">
-            <div class="flip-box-inner">
+          <div class="col-6 col-lg-4 flip-box mb-lg-0" (click)="selectCard(5)">
+            <div class="flip-box-inner" [ngStyle]="{'transform': card === 5 ? 'rotateY(180deg)' : null}">
               <div class="flip-box-front">
                 <div class="text-center px-lg-5 mb-4">
                   <figure id="icon12" class="mx-auto mb-3">
@@ -88,8 +88,8 @@
             </div>
           </div>
           
-          <div class="col-6 col-lg-4 flip-box mb-lg-0">
-            <div class="flip-box-inner">
+          <div class="col-6 col-lg-4 flip-box mb-lg-0" (click)="selectCard(6)">
+            <div class="flip-box-inner" [ngStyle]="{'transform': card === 6 ? 'rotateY(180deg)' : null}">
               <div class="flip-box-front">
                 <div class="text-center px-lg-5 mb-4">
                   <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
@@ -101,8 +101,8 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-4 flip-box mb-lg-0">
-            <div class="flip-box-inner">
+          <div class="col-6 col-lg-4 flip-box mb-lg-0" (click)="selectCard(7)">
+            <div class="flip-box-inner" [ngStyle]="{'transform': card === 7 ? 'rotateY(180deg)' : null}">
               <div class="flip-box-front">
                 <div class="text-center px-lg-5 mb-4">
                   <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
@@ -114,8 +114,8 @@
               </div>
             </div>
           </div>
-          <div class="col-6 offset-lg-2 flip-box col-lg-4 mb-lg-0">
-            <div class="flip-box-inner">
+          <div class="col-6 offset-lg-2 flip-box col-lg-4 mb-lg-0" (click)="selectCard(8)">
+            <div class="flip-box-inner" [ngStyle]="{'transform': card === 8 ? 'rotateY(180deg)' : null}">
               <div class="flip-box-front">
                 <div class="text-center px-lg-5 mb-4">
                   <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
@@ -127,8 +127,8 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4 flip-box mb-lg-0">
-            <div class="flip-box-inner">
+          <div class="col-12 col-lg-4 flip-box mb-lg-0" (click)="selectCard(9)">
+            <div class="flip-box-inner" [ngStyle]="{'transform': card === 9 ? 'rotateY(180deg)' : null}">
               <div class="flip-box-front">
                 <div class="text-center mb-4">
                   <figure id="icon11" class="ie-height-72 max-width-10 mx-auto mb-3">
