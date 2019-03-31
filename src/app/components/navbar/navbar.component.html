@@ -2,14 +2,14 @@
 <header id="header" class="u-header u-header--white-bg-on-scroll u-header--sticky-top-md u-header--bg-transparent" data-header-fix-moment="500" data-header-fix-effect="slide">
 <div class="u-header__section">
 <div id="logoAndNav" class="container">
-<nav class="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
-<a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center" aria-label="Front">
+<nav class="navbar navbar-expand-md u-header__navbar u-header__navbar--no-space row">
+<a class="u-header__navbar-brand u-header__navbar-brand-center col" aria-label="Front">
   <!-- <span class="u-header__navbar-brand-text" style="font-size: 3rem;">NEAT</span> -->
-  <img *ngIf="scrollX < 1" src="../../../assets/newRequirements/Neat-blanco-02.svg" alt="Logo" class="u-header__navbar-brand-text">
-  <img *ngIf="scrollX > 1" src="../../../assets/newRequirements/Neat-color-02.svg" alt="Logo" class="u-header__navbar-brand-text">
+  <img *ngIf="scrollX < 1 && widthPage > 700" src="../../../assets/newRequirements/Neat-blanco-01.png" alt="Logo" class="u-header__navbar-brand-text">
+  <img *ngIf="scrollX > 1 || widthPage < 700" src="../../../assets/newRequirements/Neat-color-01.png" alt="Logo" class="u-header__navbar-brand-text">
 
 </a>
-<button type="button" class="navbar-toggler btn u-hamburger"
+<!-- <button type="button" class="navbar-toggler btn u-hamburger"
         aria-label="Toggle navigation"
         aria-expanded="false"
         aria-controls="navBar"
@@ -18,15 +18,15 @@
   <span id="hamburgerTrigger" class="u-hamburger__box">
     <span class="u-hamburger__inner"></span>
   </span>
-</button>
-<div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+</button> -->
+<div id="navBar">
   <ul class="js-scroll-nav js-mega-menu navbar-nav align-items-md-center u-header__navbar-nav">
-    <span *ngIf="scrollX >= 0 && scrollX < 1200" style="color: yellow">Yo soy:</span>
-    <li id="button-nav-owner" class="nav-item u-header__nav-item" [ngClass]="{'active': showOwner === true}" (click)="fnShowOwner()">
-       <a *ngIf="scrollX >= 0 && scrollX < 1200" class="nav-link u-header__nav-link" id="pills-one-tab" data-toggle="pill" href="" role="tab" aria-controls="pills-one" aria-selected="true"><span style="color: yellow">Propietario</span></a>
+    <strong *ngIf="scrollX >= 0 && scrollX < 1200 && widthPage > 700" [ngStyle]="{'color': scrollX > 0 ? '#377dff' : 'yellow'}" class="mr-2 mb-sm-2">Yo soy:</strong>
+    <li id="button-nav-owner" (click)="fnShowOwner()">
+       <a *ngIf="scrollX >= 0 && scrollX < 1200 && widthPage > 700" class="btn btn btn-outline-primary btn-sm btn-wide mr-2" [ngClass]="{'active': showOwner, 'text-primary': !showOwner && scrollX > 1, 'text-white': showOwner || scrollX < 1}" id="button_owner" ><span>Propietario</span></a>
     </li>
-    <li id="button-nav-lessee" class="nav-item u-header__nav-item" (click)="fnShowLessee()" [ngClass]="{'active': showOwner !== true}">
-      <a *ngIf="scrollX >= 0 && scrollX < 1200" class="nav-link u-header__nav-link" id="pills-two-tab" data-toggle="pill" href="" role="tab" aria-controls="pills-two" aria-selected="false">Arrendatario</a>
+    <li id="button-nav-lessee"  (click)="fnShowLessee()" >
+      <a *ngIf="scrollX >= 0 && scrollX < 1200 && widthPage > 700" class="btn btn-outline-primary text-primary btn-sm btn-wide" id="button_lessee" [ngClass]="{'active': !showOwner, 'text-white': !showOwner}">Arrendatario</a>
     </li>
      
     <li class="nav-item u-header__nav-last-item"
@@ -45,13 +45,13 @@
 </header>
 
 
+<!-- Modal -->
 <div id="aftersometimeModal" class="js-modal-window u-modal-window" data-modal-type="aftersometime"
   data-open-effect="zoomIn"
   data-close-effect="zoomOut"
   data-breakpoint="1000"
   data-speed="500">
-  <div class="card">
-    <!-- Header -->
+  <!-- <div class="card">
     <header class="card-header bg-light py-3 px-5">
       <div class="d-flex justify-content-between align-items-center">
         <h3 class="h6 mb-0">Estás a un click de ser parte de Neat</h3>
@@ -60,80 +60,57 @@
           <span aria-hidden="true">×</span>
         </button>
       </div>
-    </header>
-    <!-- End Header -->
+    </header> -->
 
-    <!-- Body -->
-    <div class="card-body p-5">
-      <!-- <form [formGroup]="ngForm" class="js-validate">
-        <div class="form-group js-form-message">
-          <label for="exampleFormControlInput1">Email</label>
-          <input aria-label="Ingresa tu email" required
-          data-msg="Por favor ingresa un email válido."
-          data-error-class="u-has-error"
-          data-success-class="u-has-success" formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Tipo de usuario</label>
-          <select formControlName="type" class="form-control" id="exampleFormControlSelect1">
-            <option value="LESSEE">Arrendatario</option>
-            <option value="OWNER">Propietario</option>
-          </select>
-        </div>
-      </form> -->
       <div id="SVGsubscribe" class="svg-preloader gradient-half-primary-v1">
-          <div class="container space-2">
-            <div class="row justify-content-lg-end align-items-lg-center">
-              <div class="col-lg-7 mb-7 mb-lg-0">
-                <!-- SVG Icon -->
-                <figure class="ie-subscribe-illustration">
-                  <img class="js-svg-injector" src="../../assets/svg/illustrations/subscribe.svg" alt="Image Description"
-                      data-parent="#SVGsubscribe">
-                </figure>
-                <!-- End SVG Icon -->
-              </div>
+        <div class="container space-2">
+          <div class="row justify-content-lg-end align-items-lg-center">
+            <div class="col-lg-7 mb-7 mb-lg-0">
+              <!-- SVG Icon -->
+              <figure class="ie-subscribe-illustration">
+                <img class="js-svg-injector" src="../../assets/svg/illustrations/subscribe.svg" alt="Image Description"
+                    data-parent="#SVGsubscribe">
+              </figure>
+              <!-- End SVG Icon -->
+            </div>
 
-              <div class="col-lg-5">
-                <div class="pl-lg-4">
-                  <!-- Title -->
-                  <div class="mb-5">
-                    <h2 class="text-white">
-                      <strong class="font-weight-semi-bold">Neat</strong>
-                    </h2>
-                    <p class="text-white-70">
-                        Suscríbase ahora y reciba ofertas especiales junto con actualizaciones de interés periodístico sobre los últimos desarrollos de Neat.</p>
-                  </div>
-                  <!-- End Title -->
-
-                  <!-- Subscribe Form -->
-                  <form [formGroup]="ngForm" class="js-validate js-form-message">
-                    <label class="sr-only" for="heroSubscribeSrEmail">Ingresa tu email</label>
-                    <div class="input-group input-group-lg input-group-borderless input-group-pill">
-                      <input type="email" class="form-control" name="email" id="heroSubscribeSrEmail" placeholder="Your email address" aria-label="Your email address" aria-describedby="heroSubscribeButton" required>
-                      <div class="input-group-append">
-                        <button class="btn btn-white text-primary" type="submit" id="button_subscribe_modal" onClick="Custombox.modal.close();" (click)="userSubscription();">
-                          <span class="fas fa-paper-plane"></span>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                  <!-- End Subscribe Form -->
+            <div class="col-lg-5">
+              <div class="pl-lg-4">
+                <!-- Title -->
+                <div class="mb-5">
+                  <h2 class="text-white">
+                    <strong class="font-weight-semi-bold">Estás a un click de ser parte de Neat</strong>
+                  </h2>
+                  <p class="text-white-70">
+                      Suscríbase ahora y reciba ofertas especiales junto con actualizaciones de interés periodístico sobre los últimos desarrollos de Neat.</p>
                 </div>
+                <!-- End Title -->
+
+                <!-- Subscribe Form -->
+                <form [formGroup]="ngForm" class="js-validate js-form-message">
+                  <label class="sr-only" for="heroSubscribeSrEmail">Ingresa tu email</label>
+                  <div class="input-group input-group-lg input-group-borderless input-group-pill">
+                    <input type="email" class="form-control" name="email" id="heroSubscribeSrEmail" placeholder="Your email address" aria-label="Your email address" aria-describedby="heroSubscribeButton" required>
+                    <div class="input-group-append">
+                      <button class="btn btn-white text-primary" type="submit" id="button_subscribe_modal" onClick="Custombox.modal.close();" (click)="userSubscription();">
+                        <span class="fas fa-paper-plane"></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <!-- End Subscribe Form -->
               </div>
             </div>
           </div>
         </div>
-        <!-- End Subscribe Section -->
-    </div>
+      </div>
+    <!-- </div> -->
     <!-- End Body -->
 
     <!-- Footer -->
     <!-- <div class="card-footer d-flex justify-content-end">
-      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" onClick="Custombox.modal.close();" (click)="userSubscription();">Suscribirse</button>
+      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" (click)="userSubscription();" onClick="Custombox.modal.close();">Suscribirse</button>
       <button id="button_close_modal" type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Cerrar</button>
     </div> -->
     <!-- End Footer -->
   </div>
-</div>
-<!-- End Modal -->

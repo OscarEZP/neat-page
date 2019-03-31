@@ -1,75 +1,115 @@
-<div class="container" style="padding-top: 11rem !important; padding-bottom: 11rem !important;">
-  <div class="row justify-content-between align-items-center mb-3">
-    <div class="col-12 text-center mb-3 mb-sm-0">
-      <h2 class="h5 mb-0">Plan de subscripción</h2>
+<!-- Pricing Section -->
+<div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll bg-white" data-options='{direction: "normal"}'>
+  <!-- Apply your Parallax background image here -->
+  <div class="dzsparallaxer--target" style="height: 120%; background-image: url(../../assets/svg/components/bg-elements-7.svg);"></div>
+
+  <div class="container space-2">
+    <div class="text-center">
+      <h3 class="h5 text-primary"> Plan de suscripción</h3>
     </div>
-  
-    <div class="col-12 text-center">
-      <div class="btn-group btn-group-toggle">
-        <a class="js-animation-link btn btn-sm btn-outline-primary btn-sm-wide" (click)="plan('monthly')" [ngClass]="{'active': planType === 'monthly'}">
-          Mensual
-        </a>
-        <a class="js-animation-link btn btn-sm btn-outline-primary btn-sm-wide" (click)="plan('anual')" [ngClass]="{'active': planType === 'anual'}">
-          Anual
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="row justify-content-center float-center">
-    <div class="js-slide col-lg-5 col-sm">
+    <!-- Card Group -->
+    <div class="card-group card-group-md-break rounded shadow-soft col-lg-6 offset-lg-3">
       <div class="card">
-        <!-- Header -->
-        <header class="card-header bg-primary text-white text-center">
-          <span class="btn btn-xs btn-soft-white mb-3 mr-2">Plan Vida + Simple</span>
-          <strong class="btn btn-xs btn-soft-white mb-3" *ngIf="planType === 'anual'">20% dcto</strong>
-          <span class="d-block">
-            <span class="display-4 font-weight-normal">
-              <span class="align-top font-size-2">$</span><span *ngIf="planType === 'monthly'"> 1.990</span> <span *ngIf="planType === 'anual'"> 23.900</span> 
-            </span>
-            <span class="d-block text-white-50 font-size-1">Un café menos al mes, simplifica tus pagos.</span>
-          </span>
-        </header>
-        <!-- End Header -->
-  
-        <!-- Content -->
-        <div class="card-body p-5">
-          <ul class="list-unstyled font-size-1 mb-4">
-            <li class="media py-2">
-              <!-- <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span> -->
-              <div class="media-body">
-                Paga la parte interesada, ya sea arrendatario u propietario
-              </div>
-            </li>
-            <li class="media py-2">
-              <!-- <span class="fas fa-info-circle text-muted mt-1 mr-2" data-toggle="tooltip" data-placement="bottom" title="Understanding the task at hand and ironing out the wrinkles is key."></span> -->
-              <div class="media-body">
-                Por propiedad/arriendo
-              </div>
-            </li>
-          </ul>
-  
-          <button id="button-suscribe-plan" type="button" class="btn btn-sm btn-block btn-primary transition-3d-hover" href="#aftersometimeModal"
-          data-modal-target="#aftersometimeModal"
-          data-modal-effect="fadein" >Contratar ahora</button>
+        <div class="card-body text-center pt-9 px-7">
+          <!-- Button Group -->
+          <div class="btn-group btn-group-toggle mb-7">
+            <a class="js-animation-link btn btn-sm btn-outline-secondary btn-custom-toggle-primary btn-pill active" href="javascript:;"
+               data-target="#pricingMonthly"
+               data-link-group="idPricing">Mensual</a>
+            <a class="js-animation-link btn btn-sm btn-outline-secondary btn-custom-toggle-primary btn-pill" href="javascript:;"
+               data-target="#pricingYearly"
+               data-link-group="idPricing">
+              Anual
+              <span class="badge badge-success badge-pill badge-pos">Menos 20%</span>
+            </a>
+          </div>
+          <!-- End Button Group -->
+
+          <!-- Monthly Plans -->
+          <div id="pricingMonthly" data-target-group="idPricing">
+            <!-- Range Slider -->
+            <div class="text-secondary font-weight-semi-bold mb-4">
+              <span id="rangeSliderSecondaryResult1" class="mr-2"></span>
+              <span class="ml-2">Propiedades</span>
+            </div>
+            <div class="display-4 text-primary font-weight-semi-bold mb-5">
+              <span>$</span>
+              <span id="rangeSliderResult1" class="ml-n2"></span>
+            </div>
+            <input class="js-range-slider" type="text"
+                   data-extra-classes="u-range-slider"
+                   data-type="single"
+                   data-step="1"
+                   data-min="1590"
+                   data-max="1990"
+                   data-from="1830"
+                   data-prefix="$"
+                   data-secondary-value='{
+                      "steps": [1590,1690,1790,1830,1890,1950,1990],
+                      "values": [100,50,25,15,10,6,1]
+                    }'
+                   data-result-secondary="#rangeSliderSecondaryResult1"
+                   data-result-min="#rangeSliderResult1">
+            <!-- End Range Slider -->
+          </div>
+          <!-- End Monthly Plans -->
+
+          <!-- Yearly Plans -->
+          <div id="pricingYearly" style="display: none; opacity: 0;" data-target-group="idPricing">
+            <!-- Range Slider -->
+            <div class="text-secondary font-weight-semi-bold mb-4">
+              <span id="rangeSliderSecondaryResult2" class="mr-2"></span>
+              <span class="ml-2">Propiedades</span>
+            </div>
+            <div class="display-4 text-primary font-weight-semi-bold mb-5">
+              <span>$</span>
+              <span id="rangeSliderResult2" class="ml-n2"></span>
+            </div>
+            <input class="js-range-slider" type="text"
+                   data-extra-classes="u-range-slider"
+                   data-type="single"
+                   data-step="1"
+                   data-min="15240"
+                   data-max="19080"
+                   data-from="17520"
+                   data-prefix="$"
+                   data-secondary-value='{
+                    "steps": [15240,16200,17160,17520,18120,18720,19080],
+                    "values": [100,50,25,15,10,6,1]
+                    }'
+                   data-result-secondary="#rangeSliderSecondaryResult2"
+                   data-result-min="#rangeSliderResult2">
+            <!-- End Range Slider -->
+          </div>
+          <!-- End Yearly Plans -->
+        </div>
+        <div class="card-footer border-0 pt-0 pb-9 px-7">
+          <!-- Icon Blocks -->
+          <div class="media justify-content-center">
+            <button id="button-suscribe-home" href="#aftersometimeModal"
+              data-modal-target="#aftersometimeModal"
+              data-modal-effect="fadein" class="btn btn-primary btn-wide text-white transition-3d-hover" >Contactanos</button>
+          </div>
+          <!-- End Icon Blocks -->
         </div>
       </div>
-      <!-- End Content -->
-    </div>
+
+      
+    <!-- End Card Group -->
   </div>
-  
 </div>
-<!-- Title -->
+<!-- End Pricing Section -->
 
 
 
+<!-- Modal -->
 <!-- Modal -->
 <div id="aftersometimeModal" class="js-modal-window u-modal-window" data-modal-type="aftersometime"
   data-open-effect="zoomIn"
   data-close-effect="zoomOut"
   data-breakpoint="1000"
   data-speed="500">
-  <div class="card">
-    <!-- Header -->
+  <!-- <div class="card">
     <header class="card-header bg-light py-3 px-5">
       <div class="d-flex justify-content-between align-items-center">
         <h3 class="h6 mb-0">Estás a un click de ser parte de Neat</h3>
@@ -78,11 +118,8 @@
           <span aria-hidden="true">×</span>
         </button>
       </div>
-    </header>
-    <!-- End Header -->
+    </header> -->
 
-    <!-- Body -->
-    <div class="card-body p-5">
       <div id="SVGsubscribe" class="svg-preloader gradient-half-primary-v1">
         <div class="container space-2">
           <div class="row justify-content-lg-end align-items-lg-center">
@@ -100,7 +137,7 @@
                 <!-- Title -->
                 <div class="mb-5">
                   <h2 class="text-white">
-                    <strong class="font-weight-semi-bold">Neat</strong>
+                    <strong class="font-weight-semi-bold">Estás a un click de ser parte de Neat</strong>
                   </h2>
                   <p class="text-white-70">
                       Suscríbase ahora y reciba ofertas especiales junto con actualizaciones de interés periodístico sobre los últimos desarrollos de Neat.</p>
@@ -125,15 +162,14 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
     <!-- End Body -->
 
     <!-- Footer -->
     <!-- <div class="card-footer d-flex justify-content-end">
-      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" onClick="Custombox.modal.close();" (click)="userSubscription();">Suscribirse</button>
+      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" (click)="userSubscription();" onClick="Custombox.modal.close();">Suscribirse</button>
       <button id="button_close_modal" type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Cerrar</button>
     </div> -->
     <!-- End Footer -->
   </div>
-</div>
 <!-- End Modal -->

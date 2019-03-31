@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit, OnChanges {
   showAlertSuccess = false;
   userSubscribed;
   Custombox;
+  @Input() widthPage = 0;
 
   @Input() userType;
 

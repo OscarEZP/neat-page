@@ -13,6 +13,7 @@ import { HowWorkComponent } from './landing/how-work/how-work.component';
 import { PlansComponent } from './landing/plans/plans.component';
 import { LoginComponent } from './landing/login/login.component';
 import { ToastNotificationsModule } from 'ngx-toast-notifications';
+import { TypingAnimationModule } from 'angular-typing-animation';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ToastNotificationsModule } from 'ngx-toast-notifications';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastNotificationsModule.forRoot()
+    ToastNotificationsModule.forRoot(),
+    TypingAnimationModule
   ],
   exports: [
     NavbarComponent,

@@ -1,8 +1,8 @@
-<app-navbar [scrollX]="scrollingX" (showUserType)="userType($event)"></app-navbar>
+<app-navbar [scrollX]="scrollingX" [widthPage]="innerWidth" (showUserType)="userType($event)"></app-navbar>
 
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main" (scroll)="onScrollEvent($event)">
-  <app-home [userType]="showUserType"></app-home>
+  <app-home [widthPage]="innerWidth" [userType]="showUserType"></app-home>
 
   <app-features [userType]="showUserType"></app-features>
 

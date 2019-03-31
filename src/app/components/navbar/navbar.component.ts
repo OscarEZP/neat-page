@@ -11,6 +11,7 @@ import { Toaster } from 'ngx-toast-notifications';
 export class NavbarComponent implements OnInit {
   @Input() scrollX = 0;
   @Output() showUserType = new EventEmitter();
+  @Input() widthPage = 0;
 
   ngForm: FormGroup;
   userTypes;
@@ -27,6 +28,7 @@ export class NavbarComponent implements OnInit {
     private toaster: Toaster) { }
 
   ngOnInit() {
+    console.log(this.widthPage, this.scrollX, 'ancho de pantalla');
     this.buildForm();
     this.getUserTypes();
     this.showUserType.emit({

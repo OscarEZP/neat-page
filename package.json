@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "angular-toastr": "^2.1.1",
+    "angular-typing-animation": "^0.5.4",
     "core-js": "^2.5.4",
     "ngx-toast-notifications": "^1.0.1",
     "ngx-toastr": "^10.0.2",

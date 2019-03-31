@@ -1,99 +1,55 @@
 <div id="featuresSection">
-  <!-- <div class="tab-content" id="pills-tabContent"> -->
-    <!-- <div id="SVGheroSection" class="d-lg-flex position-relative z-index-2 mb-4">
-      <div class="container mb-4 d-lg-flex align-items-lg-center flex-lg-wrap height-lg-100vh text-center">
-        <div class="w-100 mx-auto mb-9 mb-lg-0">
-          <div class="mb-5">
-            <h2 *ngIf="!userType.owner" class="display-4 font-size-md-down-5 font-weight-semi-bold">Pagar tu arriendo nunca ha sido más fácil</h2>
-            <h2 *ngIf="userType.owner" class="display-4 font-size-md-down-5 font-weight-semi-bold">Recibir los pagos de tus arrendatarios nunca ha sido más fácil</h2>
-          </div>
-          <div class="small mb-4">
-            <span *ngIf="!userType.owner" class="font-weight-medium">Simplificamos tus preocupaciones.</span>
-            <span *ngIf="userType.owner" class="font-weight-medium">Te ayudamos a recibir los pagos a tiempo y a entender el estado de tu inversión.</span>          
-          </div>
-          <form class="js-validate w-md-75 w-lg-50 w-xl-40 mx-md-auto mb-4">
-            <div class="js-form-message">
-              <div class="input-group-append justify-content-center">
-                <button id="button-suscribe-home" type="submit" href="#aftersometimeModal"
-                data-modal-target="#aftersometimeModal"
-                data-modal-effect="fadein" class="btn btn-primary btn-wide" (click)="showAlertSuccess = false;">Suscribirse</button>
-              </div>
-            </div>
-          </form>
+  <div id="SVGGraphicIllustration1" class="svg-preloader d-lg-flex align-items-lg-center gradient-half-primary-v1 height-lg-100vh">
+    <div class="d-none d-lg-block bg-img-hero position-absolute top-0 right-0 left-0 height-lg-100vh" style="background-image: url(../../assets/img/bg-shapes/bg1.png);"></div>
+    <div class="container space-top-2 space-bottom-2 ">
+      <div class="row align-items-md-center">
+
+        <div *ngIf="widthPage < 700" class="position-relative bg-white text-center mx-lg-auto ml-4 mb-4" style="border-radius: 0.25rem;">
+            <button id="button-owner" class="btn btn-white btn-wide text-primary " [ngClass]="{'active': userType.owner}" (click)="userType.owner = true">Propietario</button>
+            <button id="button-lessee" class="btn btn-white btn-wide text-primary" [ngClass]="{'active': !userType.owner}" (click)="userType.owner = false">Arrendatario</button>
         </div>
-    
-        <div class="w-lg-50 mt-auto mx-lg-auto">
-          <figure class="ie-enterprise-2" >
-            <img class="js-svg-injector"  src="../../assets/svg/flat-icons/enterprise-2.svg" alt="Image Description"
-                  data-parent="#SVGheroSection">
+        <div class="col-lg-6">
+          <!-- Title -->
+          <div class="mb-7">
+            <h1 class="text-white dinamic-title">
+              <span class="text-warning">
+                <span *ngIf="!userType.owner" class="mr-2" typingAnimation [typeSpeed]="50" [condition]="!userType.owner" [startDelay]="1000" [hideCursorOnComplete]="true">Pagar tu arriendo </span>
+                <span *ngIf="userType.owner" class="mr-2" typingAnimation [typeSpeed]="50" [condition]="userType.owner" [startDelay]="1000" [hideCursorOnComplete]="true">Recibir los pagos de tus arrendatarios</span>
+                <span class="text-white-70">nunca ha sido tan fácil.</span>
+                <!-- <span *ngIf="userType.owner" class="u-text-animation u-text-animation--typing owner"></span> -->
+              </span>
+            </h1>
+            <!-- <span *ngIf="!userType.owner" class="font-weight-medium">Simplificamos tus preocupaciones.</span>
+            <span *ngIf="userType.owner" class="font-weight-medium">Te ayudamos a recibir los pagos a tiempo y a entender el estado de tu inversión.</span> -->
+            <p class="lead text-white-70 subtitle" *ngIf="!userType.owner">Simplificamos tus preocupaciones.</p>
+            <p class="lead text-white-70 subtitle" *ngIf="userType.owner">Te ayudamos a recibir los pagos a tiempo y a entender el estado de tu inversión.</p>
+
+          </div>
+          <!-- End Title -->
+
+          <button id="button-suscribe-home" href="#aftersometimeModal"
+          data-modal-target="#aftersometimeModal"
+          data-modal-effect="fadein" class="btn btn-white btn-wide text-primary transition-3d-hover ml-xs-4 text-center mx-lg-auto ml-11 position-relative" (click)="showAlertSuccess = false;">Suscribirse</button>
+        
+        </div>
+
+        <div class="col-lg-6 d-none d-lg-inline-block">
+          <figure class="ie-graphic-illustration-1">
+            <img class="js-svg-injector" src="../../assets/svg/illustrations/image-upload.svg" alt="Image Description"
+                  
+                  data-parent="#SVGGraphicIllustration1">
           </figure>
         </div>
       </div>
-    
-    </div> -->
-    <div id="SVGGraphicIllustration1" class="svg-preloader d-lg-flex align-items-lg-center gradient-half-primary-v1 height-lg-100vh">
-      <div class="d-none d-lg-block bg-img-hero position-absolute top-0 right-0 left-0 height-lg-100vh" style="background-image: url(../../assets/img/bg-shapes/bg1.png);"></div>
-      <div class="container space-top-3 space-bottom-2 space-top-md-4 space-bottom-md-3">
-        <div class="row align-items-md-center">
-          <div class="col-lg-6">
-            <!-- Title -->
-            <div class="mb-7">
-              <h1 class="text-white font-weight-normal">
-                <span class="text-warning">
-                  <span *ngIf="!userType.owner" class="u-text-animation u-text-animation--typing">Pagar tu arriendo nunca ha sido más fácil</span>
-                  <span *ngIf="userType.owner" class="u-text-animation u-text-animation--typing owner">Recibir los pagos de tus arrendatarios nunca ha sido más fácil</span>
-                </span>
-              </h1>
-              <!-- <span *ngIf="!userType.owner" class="font-weight-medium">Simplificamos tus preocupaciones.</span>
-              <span *ngIf="userType.owner" class="font-weight-medium">Te ayudamos a recibir los pagos a tiempo y a entender el estado de tu inversión.</span> -->
-              <p class="lead text-white-70" *ngIf="!userType.owner">Simplificamos tus preocupaciones.</p>
-              <p class="lead text-white-70" *ngIf="userType.owner">Te ayudamos a recibir los pagos a tiempo y a entender el estado de tu inversión.</p>
-
-            </div>
-            <!-- End Title -->
-
-            <button id="button-suscribe-home" href="#aftersometimeModal"
-            data-modal-target="#aftersometimeModal"
-            data-modal-effect="fadein" class="btn btn-white btn-wide text-primary transition-3d-hover" (click)="showAlertSuccess = false;">Suscribirse</button>
-          </div>
-
-          <div class="col-lg-6 d-none d-lg-inline-block">
-            <figure class="ie-graphic-illustration-1">
-              <img class="js-svg-injector" src="../../assets/svg/illustrations/image-upload.svg" alt="Image Description"
-                   
-                   data-parent="#SVGGraphicIllustration1">
-            </figure>
-          </div>
-        </div>
-      </div>
     </div>
-  <!-- </div> -->
 </div>
  
 
-
-
-<!-- Modal -->
 <div id="aftersometimeModal" class="js-modal-window u-modal-window" data-modal-type="aftersometime"
   data-open-effect="zoomIn"
   data-close-effect="zoomOut"
   data-breakpoint="1000"
   data-speed="500">
-  <div class="card">
-    <!-- Header -->
-    <header class="card-header bg-light py-3 px-5">
-      <div class="d-flex justify-content-between align-items-center">
-        <h3 class="h6 mb-0">Estás a un click de ser parte de Neat</h3>
-
-        <button type="button" class="close" aria-label="Close" onclick="Custombox.modal.close();">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-    </header>
-    <!-- End Header -->
-
-    <!-- Body -->
-    <div class="card-body p-5">
       <div id="SVGsubscribe" class="svg-preloader gradient-half-primary-v1">
         <div class="container space-2">
           <div class="row justify-content-lg-end align-items-lg-center">
@@ -111,7 +67,7 @@
                 <!-- Title -->
                 <div class="mb-5">
                   <h2 class="text-white">
-                    <strong class="font-weight-semi-bold">Neat</strong>
+                    <strong class="font-weight-semi-bold">Estás a un click de ser parte de Neat</strong>
                   </h2>
                   <p class="text-white-70">
                       Suscríbase ahora y reciba ofertas especiales junto con actualizaciones de interés periodístico sobre los últimos desarrollos de Neat.</p>
@@ -136,15 +92,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Body -->
-
-    <!-- Footer -->
-    <!-- <div class="card-footer d-flex justify-content-end">
-      <button id="button_subscribe_modal" type="button" class="btn btn-sm btn-primary transition-3d-hover mr-1" [disabled]="!ngForm.valid" (click)="userSubscription();" onClick="Custombox.modal.close();">Suscribirse</button>
-      <button id="button_close_modal" type="button" class="btn btn-sm btn-soft-secondary transition-3d-hover" onclick="Custombox.modal.close();">Cerrar</button>
-    </div> -->
-    <!-- End Footer -->
   </div>
 </div>
 <!-- End Modal -->

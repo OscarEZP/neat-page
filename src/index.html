@@ -76,6 +76,8 @@
   <script src="./assets/js/components/hs.fancybox.js"></script>
   <script src="./assets/js/components/hs.validation.js"></script>
   <script src="./assets/js/components/hs.go-to.js"></script>
+  <script src="./assets/vendor/typed.js/lib/typed.min.js"></script>
+
 
   <script src="./assets/vendor/custombox/dist/custombox.min.js"></script>
   <script src="./assets/vendor/custombox/dist/custombox.legacy.min.js"></script>
@@ -85,6 +87,17 @@
   <script src="./assets/vendor/slick-carousel/slick/slick.js"></script>
 
   <script src="./assets/js/components/hs.slick-carousel.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="./assets/vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+  <script src="./assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="./assets/js/components/hs.range-slider.js"></script>
+  <script src="./assets/js/components/hs.show-animation.js"></script>
+
+  <link rel="stylesheet" href="./assets/vendor/ion-rangeslider/css/ion.rangeSlider.css">
+  <link rel="stylesheet" href="./assets/vendor/dzsparallaxer/dzsparallaxer.css">
 	
   <!-- JS Plugins Init. -->
   <script>
@@ -125,14 +138,26 @@
 
       $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
 
-       var typed = new Typed(".u-text-animation.u-text-animation--typing owner", {
-        strings: ["Pagar tu arriendo nunca ha sido más fácil."],
-        typeSpeed: 60,
-        loop: true,
-        backSpeed: 25,
-        backDelay: 1500
-      });
+      // var typed = new Typed(".animation-lessee", {
+      //   strings: ["Pagar tu arriendo"],
+      //   typeSpeed: 60,
+      //   loop: true,
+      //   backSpeed: 25,
+      //   backDelay: 1500
+      // });
 
+        // var typedOwner = new Typed(".u-text-animation.u-text-animation--typingowner", {
+        //   strings: ["Recibir los pagos de tus arrendatarios"],
+        //   typeSpeed: 60,
+        //   loop: true,
+        //   backSpeed: 25,
+        //   backDelay: 1500
+        // });
+
+      $.HSCore.components.HSShowAnimation.init('.js-animation-link');
+
+      // initialization of forms
+      $.HSCore.components.HSRangeSlider.init('.js-range-slider');
     });
   </script>
 </body>
